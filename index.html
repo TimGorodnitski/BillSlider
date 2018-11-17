@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sliders</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Split the bill!</h1>
+            <p class="lead">This is an app for 3 friends to split a bill based on how willing they are to pay.</p>
+            <hr class="my-4">
+            <div id="dropdowns">
+                <p class="lead">How much did you order?</p>
+                <select id="dropdown1" name="dd1" onChange="updateDropdowns()">
+                    <option value="Andy">Andy</option>
+                    <option value="Bob">Bob</option>
+                    <option value="Chris">Chris</option>
+                    <option value="Dan">Dan</option>
+                    <option value="Eric">Eric</option>
+                </select>
+                $<input type="number" id="spent1" value=0>
+                <br><br>
+                <select id="dropdown2" name="dd2" onChange="updateDropdowns()">
+                    <option value="Andy">Andy</option>
+                    <option value="Bob">Bob</option>
+                    <option value="Chris">Chris</option>
+                    <option value="Dan">Dan</option>
+                    <option value="Eric">Eric</option>
+                </select>
+                $<input type="number" id="spent2" value=0>
+                <br><br>
+                <select id="dropdown3" name="dd3" onChange="updateDropdowns()">
+                    <option value="Andy">Andy</option>
+                    <option value="Bob">Bob</option>
+                    <option value="Chris">Chris</option>
+                    <option value="Dan">Dan</option>
+                    <option value="Eric">Eric</option>
+                </select>
+                $<input type="number" id="spent3" value=0>
+                <br>
+                <p>Your total bill was: <span id="spentTotal"></span></p>
+            </div><br>
+            <div id="sliders">
+                <p class="lead">How willing are you to pay for your bill?</p>
+                <div class="slidecontainer1">
+                    <span class="lead" id="slider1name"></span>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="slider1">
+                    <span id="slider1value"></span>
+                </div>
+                <div class="slidecontainer2">
+                    <span class="lead" id="slider2name"></span>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="slider2">
+                    <span id="slider2value"></span>
+                </div>
+                <div class="slidecontainer3">
+                    <span class="lead" id="slider3name"></span>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="slider3">
+                    <span id="slider3value"></span>
+                </div>
+            </div>
+            <div id="results">
+                <p>Here's what everyone owes!</p>
+                <span class="lead" id="total1name"></span><br>
+                <span class="lead" id="total2name"></span><br>
+                <span class="lead" id="total3name"></span><br>
+            </div>
+
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+
+</html>
